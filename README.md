@@ -7,7 +7,7 @@ virtualenv -p python3 envname
 source envname/bin/activate
 
 3) Install packages:
-install -r "requirements.txt"
+pip install -r "requirements.txt"
 
 4) Execute the script
 python3 ScrapeData.py
