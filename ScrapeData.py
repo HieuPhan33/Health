@@ -4,7 +4,6 @@ import re
 from bs4 import BeautifulSoup
 import pprint
 import csv
-import pandas as pd
 pp = pprint.PrettyPrinter(indent=3)
 # Prompt symptomp term
 print("Enter the symptomp you would like to extract data")
@@ -63,8 +62,8 @@ try:
     # Write combination of symptomps into symptomp_comb.csv
     with open((str(symptomp) + '_comb.csv'), 'w') as f:
         w = csv.writer(f)
-        w.writerow(CombinationSyms.keys())
-        w.writerow(zip(*CombinationSyms.values()))
+        for key,value in CombinationSyms.items():
+            w.writerow([key,value])
     #print out
     pp.pprint(CombinationSyms)
     for not_found in not_found_subsyms:
