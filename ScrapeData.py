@@ -1,5 +1,4 @@
-import urllib.request
-import requests
+import urllib
 import json
 import re
 from bs4 import BeautifulSoup
